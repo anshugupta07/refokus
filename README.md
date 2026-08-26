@@ -1,16 +1,36 @@
-# React + Vite
+# Refokush
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React single-page website built with Vite, Tailwind CSS, Motion, Locomotive Scroll, and React Icons.
 
-Currently, two official plugins are available:
+![Refokush website](public/Fullpage.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies Used
 
-## React Compiler
+- React 19
+- Vite
+- Tailwind CSS 4
+- Motion for animations
+- Locomotive Scroll for smooth scrolling
+- React Icons
+- Oxlint
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting Started
 
-## Expanding the Oxlint configuration
+Install the dependencies:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## Available Scripts
+
+- `npm run dev` - start the development server
+- `npm run build` - create a production build
+- `npm run lint` - run Oxlint
+- `npm run preview` - preview the production build

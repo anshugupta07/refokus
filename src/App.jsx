@@ -5,7 +5,10 @@ import Stripes from './components/Stripes'
 import Products from './components/Products'
 import Marquees from './components/Marquees'
 import Cards from './components/Cards'
+import Footer from './components/Footer'
+import LocomotiveScroll from 'locomotive-scroll';
 const App = () => {
+  const scroll = new LocomotiveScroll();
   return (
     <div className="w-full  select-none bg-zinc-900 text-white font:['Satoshi']">
 
@@ -15,6 +18,7 @@ const App = () => {
       <Products/>
       <Marquees />
       <Cards/>
+     <Footer/>
     </div>
   )
 }

@@ -1,25 +1,36 @@
-import React from 'react'
-import Button from './Button'
+import React from "react";
+import Button from "./Button";
+import { motion } from "motion/react";
 
-function Product({val }) {
+function Product({ val, mover, count }) {
   return (
-
-    <div className="w-full h-80 py-20 text-white">
-            <div
-                onMouseEnter={() => mover(count)}
-                className="max-w-7xl mx-auto flex items-center justify-between"
-            >
-                <h1 className="text-5xl font-semibold">{val.title}</h1>
-                <div className="dets w-1/3">
-                    <p className="mb-10">{val.description}</p>
-                    <div className="flex items-center gap-5">
-                        {val.live &&    <Button />}
-                        {val.case && <Button title='Case study' />}
-                    </div>
-                </div>
+    <div className="w-full py-10 h-92 text-white">
+      <motion.div
+        whileHover={{
+          backgroundColor: val.color,
+        }}
+          className="w-full h-full flex items-center"
+      >
+        <div
+          onMouseEnter={() => {
+            mover(count);
+          }}
+          className="max-w-7xl mx-auto flex items-center justify-between"
+        >
+          <h1 className="text-6xl capitalize font-medium text-center">
+            {val.title}
+          </h1>
+          <div className="dets w-1/3 flex flex-col">
+            <p className="mb-10 mr-24">{val.description}</p>
+            <div className="flex items-center gap-5">
+              {val.live && <Button title="Live Website" />}
+              {val.case && <Button title="Case Study" />}
             </div>
+          </div>
         </div>
-  )
+      </motion.div>
+    </div>
+  );
 }
 
-export default Product
+export default Product;
